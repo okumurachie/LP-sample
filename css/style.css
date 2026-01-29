@@ -1,0 +1,1069 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Serif JP", "Shippori Mincho", serif;
+    line-height: 1.8;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヒーローセクション */
+.top {
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+        url("../images/water2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.top::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.top-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.top-left {
+    flex: 1;
+    text-align: left;
+    max-width: 650px;
+}
+.top-right {
+    flex: 0 0 380px;
+    width: 380px;
+}
+.top-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #5375ee 0%, #0600b4 100%);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Zen Old Mincho", serif;
+    margin-bottom: 50px;
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+.top h1 {
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(28px, 5vw, 48px);
+    color: #d63384;
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+.top h1 .highlight {
+    font-family: "Zen Old Mincho", serif;
+    font-size: clamp(36px, 6vw, 64px);
+    display: block;
+    color: #ff1493;
+    text-shadow: 2px 2px 4px rgba(255, 20, 147, 0.2);
+    white-space: nowrap;
+}
+.subtitle {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #666;
+    margin-bottom: 40px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* 悩みセクション */
+.pain-points {
+    padding: 80px 20px;
+    background: white;
+}
+
+.pain-points h2 {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 36px);
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.pain-card {
+    background: #fff9fb;
+    border: 2px solid #ffe0ef;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pain-card:hover {
+    transform: translateY(-5px);
+}
+
+.pain-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.pain-case {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 20px;
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+.pain-card p {
+    font-family: "Noto Serif JP", serif;
+    color: #666;
+    font-size: 15px;
+    text-align: left;
+}
+
+.suggestion-box {
+    background: linear-gradient(135deg, #fff5f9 0%, #ffeef8 100%);
+    border-left: 5px solid #ff69b4;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: "Noto Serif JP", serif;
+    font-size: 18px;
+    line-height: 2;
+    color: #555;
+}
+
+/* ソリューションセクション */
+.solution {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #34495e 0%, #121212 100%);
+}
+
+.solution h2 {
+    text-align: center;
+    font-family: "Zen Old Mincho", serif;
+    font-size: clamp(32px, 5vw, 42px);
+    color: #ff1493;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.solution-subtitle {
+    text-align: center;
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(20px, 3vw, 28px);
+    color: #fff;
+    margin-bottom: 60px;
+    font-weight: 500;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.feature-item {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-number {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+    color: white;
+    border-radius: 50%;
+    line-height: 60px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-family: "Shippori Mincho", serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-family: "Noto Serif JP", serif;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+}
+/* 潤いの重要性セクション */
+.moisture-importance {
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(24px, 4vw, 32px);
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.paper-comparison {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.comparison-item {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-visual {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.comparison-item h3 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 22px;
+    color: #ff1493;
+    margin-bottom: 15px;
+}
+
+.comparison-item p {
+    font-family: "Noto Serif JP", serif;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.comparison-item strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.comparison-arrow {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff69b4;
+    text-align: center;
+}
+
+.comparison-arrow span {
+    display: block;
+    background: #ff69b4;
+    color: white;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+}
+
+.moisture-conclusion {
+    background: linear-gradient(135deg, #fff5f9 0%, #ffeef8 100%);
+    border: 3px solid #ff69b4;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.moisture-conclusion h3 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 26px;
+    color: #ff1493;
+    margin-bottom: 20px;
+}
+
+.emphasis-text {
+    font-family: "Shippori Mincho", serif;
+    font-size: 20px;
+    color: #333;
+    line-height: 2;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    font-family: "Noto Serif JP", serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 2;
+    font-weight: 700;
+}
+
+.sub-text strong {
+    font-family: "Shippori Mincho", serif;
+    color: #ff1493;
+    font-size: 18px;
+}
+
+/* 成分セクション */
+.ingredients {
+    padding: 80px 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url("../images/water3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ingredients h2 {
+    text-align: center;
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(28px, 4vw, 38px);
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.ingredients h2 .subtitle {
+    display: block;
+    font-family: "Zen Old Mincho", serif;
+    font-size: clamp(20px, 2vw, 24px);
+    color: #ff69b4;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ingredients-intro {
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(15px, 2vw, 17px);
+    color: #666;
+    margin-bottom: 50px;
+    line-height: 2;
+}
+
+.pc-only {
+    display: inline;
+}
+
+.ingredient-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.ingredient-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.ingredient-card:hover {
+    transform: translateY(-8px);
+}
+
+.ingredient-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.ingredient-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #ff1493;
+    margin-bottom: 10px;
+}
+
+.ingredient-card p {
+    font-family: "Noto Serif JP", serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.synergy-box {
+    background: white;
+    border: 3px solid #ff69b4;
+    border-radius: 15px;
+    padding: 35px 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.synergy-box h4 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 22px;
+    color: #ff1493;
+    margin-bottom: 15px;
+}
+
+.synergy-box p {
+    font-family: "Noto Serif JP", serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 2;
+}
+
+/* 使い方セクション */
+.how-to-use {
+    padding: 80px 20px;
+    background: white;
+}
+
+.how-to-use h2 {
+    text-align: center;
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(32px, 5vw, 42px);
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.how-to-use h2 .pink {
+    font-family: "Zen Old Mincho", serif;
+    color: #ff1493;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step-circle {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    box-shadow: 0 5px 20px rgba(255, 20, 147, 0.3);
+}
+
+.step h3 {
+    font-size: 20px;
+    color: #ff1493;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-family: "Noto Serif JP", serif;
+    color: #666;
+    font-size: 16px;
+}
+
+/* 期待する効果セクション */
+.benefits {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #fdf8f5 0%, #f9f2ed 50%, #f5ebe3 100%);
+}
+
+.benefits h2 {
+    text-align: center;
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(32px, 5vw, 42px);
+    color: #333;
+    margin-bottom: 60px;
+}
+.benefit-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+.benefit-list {
+    flex: 1;
+    max-width: 600px;
+}
+
+.benefit-item {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.benefit-icon {
+    font-size: 40px;
+    min-width: 60px;
+}
+
+.benefit-text h3 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 20px;
+    color: #ff1493;
+    margin-bottom: 8px;
+}
+
+.benefit-text p {
+    font-family: "Noto Serif JP", serif;
+    color: #666;
+    font-size: 15px;
+}
+.benefit-image {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: fit-content;
+}
+.benefit-image:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.6), 0 0 60px rgba(255, 245, 249, 0.8),
+        0 0 80px rgba(255, 192, 203, 0.5);
+}
+
+.benefit-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.4), 0 0 40px rgba(255, 245, 249, 0.6),
+        0 0 60px rgba(255, 192, 203, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.8);
+    mask-image: radial-gradient(
+        ellipse 80% 70% at 50% 50%,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.8) 40%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    -webkit-mask-image: radial-gradient(
+        ellipse 80% 70% at 50% 50%,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.8) 40%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    transition: all 0.3s ease;
+}
+
+/* 科学的根拠セクション */
+.science {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+.science-title {
+    text-align: center;
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(28px, 4vw, 36px);
+    color: #333;
+    margin-bottom: 50px;
+}
+.science-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.science-subtitle {
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+.strong-span {
+    font-family: "Shippori Mincho", serif;
+    color: #ff1493;
+}
+.mechanism {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.mechanism-step {
+    text-align: center;
+    padding: 20px;
+    background: #fff9fb;
+    border-radius: 15px;
+}
+.mechanism-step h4 {
+    font-family: "Playfair Display", serif;
+    color: #ff1493;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.mechanism-step p {
+    font-family: "Noto Serif JP", serif;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+}
+.science-alert {
+    font-family: "Noto Serif JP", serif;
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 130px;
+}
+
+/* 信頼の証セクション */
+.trust {
+    padding: 80px 20px;
+    background: rgb(227, 243, 250);
+}
+
+.trust h2 {
+    text-align: center;
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(28px, 4vw, 36px);
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.trust-item {
+    background: linear-gradient(135deg, #fff5f9 0%, #ffeef8 100%);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.trust-item:hover {
+    transform: scale(1.05);
+}
+
+.trust-badge {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.trust-item h3 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: 20px;
+    color: #ff1493;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.trust-item p {
+    font-family: "Noto Serif JP", serif;
+    font-size: 15px;
+    color: #666;
+}
+
+/* CTAセクション */
+.final-cta {
+    padding: 100px 20px;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+        url("../images/water4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.final-cta h2 {
+    font-family: "Zen Old Mincho", serif;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 30px;
+    color: #535252;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.final-cta p {
+    font-family: "Shippori Mincho", serif;
+    font-size: clamp(18px, 3vw, 24px);
+    color: #787777;
+    margin-bottom: 50px;
+    opacity: 0.95;
+}
+.official-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.official-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+.campaign-badge {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, #a0153e 0%, #d4145a 50%, #a0153e 100%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    animation: badge-glow 2s infinite;
+    white-space: nowrap;
+}
+.campaign-badge::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: badge-shine 3s infinite;
+}
+@keyframes badge-shine {
+    0% {
+        transform: translateX(-100%);
+    }
+    50%,
+    100% {
+        transform: translateX(200%);
+    }
+}
+@keyframes badge-glow {
+    0%,
+    100% {
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(255, 107, 107, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+}
+.badge-icon {
+    margin: 0 8px;
+    font-size: 1.2rem;
+    animation: twinkle 1.5s infinite;
+}
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+/* ゴールドボタン - 艶のあるデザイン */
+.cta-button-gold {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(
+        135deg,
+        #d4af37 0%,
+        #f9d77e 25%,
+        #d4af37 50%,
+        #aa8c2e 75%,
+        #d4af37 100%
+    );
+    background-size: 200% 100%;
+    color: #2c2416;
+    padding: 22px 55px;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5), inset 0 2px 5px rgba(255, 255, 255, 0.5),
+        inset 0 -2px 5px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+}
+/* 艶効果 */
+.button-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    transform: skewX(-20deg);
+    animation: gold-shine 3s infinite;
+}
+@keyframes gold-shine {
+    0% {
+        left: -100%;
+    }
+    20%,
+    100% {
+        left: 150%;
+    }
+}
+/* ホバーエフェクト */
+.cta-button-gold:hover {
+    transform: translateY(-4px) scale(1.02);
+    background-position: 100% 0;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.7), inset 0 2px 8px rgba(255, 255, 255, 0.6),
+        inset 0 -2px 8px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+.cta-button-gold:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5), inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.button-text {
+    letter-spacing: 0.08em;
+    position: relative;
+    z-index: 1;
+}
+.button-arrow {
+    font-size: 1.6rem;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+.cta-button-gold:hover .button-arrow {
+    transform: translateX(8px);
+}
+
+/* フッター */
+footer {
+    background: #333;
+    padding: 30px;
+}
+.footer-inner {
+    width: 80%;
+    margin: 0 aut0;
+}
+.alert {
+    display: flex;
+    justify-content: flex-end;
+}
+.alert p {
+    color: #fff;
+    text-align: left;
+    font-size: 14px;
+}
+.small {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1140px) {
+    .top-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .official-link-wrapper {
+        width: 50%;
+    }
+    .campaign-badge {
+        font-size: 0.9rem;
+        padding: 12px 28px;
+    }
+    .badge-icon {
+        font-size: 1rem;
+        margin: 0 6px;
+    }
+    .cta-button-gold {
+        font-size: 1.25rem;
+        padding: 20px 45px;
+    }
+    .button-arrow {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 870px) {
+    .campaign-badge {
+        font-size: 0.85rem;
+        padding: 11px 24px;
+    }
+    .badge-icon {
+        font-size: 0.95rem;
+        margin: 0 5px;
+    }
+    .cta-button-gold {
+        font-size: 1.15rem;
+        padding: 18px 40px;
+        gap: 12px;
+    }
+    .button-arrow {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .paper-comparison {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .comparison-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+    .comparison-arrow span {
+        display: block;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .comparison-item {
+        padding: 30px 20px;
+    }
+    .moisture-conclusion {
+        padding: 30px 20px;
+    }
+    .emphasis-text {
+        font-size: 18px;
+    }
+    .benefit-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .benefit-image {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .pc-only {
+        display: none;
+    }
+    .ingredient-grid {
+        grid-template-columns: 1fr;
+    }
+    .final-cta {
+        padding: 60px 15px;
+    }
+    .final-cta h2 {
+        font-size: clamp(24px, 6vw, 32px);
+        margin-bottom: 20px;
+    }
+    .final-cta p {
+        font-size: clamp(16px, 4vw, 20px);
+        margin-bottom: 30px;
+    }
+    .official-link {
+        padding: 50px 15px;
+    }
+    .official-link-wrapper {
+        width: 90%;
+        max-width: 100%;
+    }
+    .campaign-badge {
+        font-size: 0.8rem;
+        padding: 10px 22px;
+    }
+    .cta-button-gold {
+        font-size: 1.1rem;
+        padding: 18px 38px;
+    }
+    .button-arrow {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .final-cta {
+        padding: 40px 10px;
+    }
+    .official-link {
+        padding: 30px 10px;
+    }
+    .official-link-wrapper {
+        gap: 15px;
+    }
+    .campaign-badge {
+        font-size: 0.75rem;
+        padding: 9px 18px;
+        border-radius: 40px;
+    }
+    .badge-icon {
+        margin: 0 4px;
+        font-size: 0.9rem;
+    }
+    .cta-button-gold {
+        font-size: 1rem;
+        padding: 16px 32px;
+        gap: 10px;
+        border-radius: 40px;
+    }
+    .button-text {
+        letter-spacing: 0.05em;
+    }
+    .button-arrow {
+        font-size: 1.2rem;
+    }
+}
